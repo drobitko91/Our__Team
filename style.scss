@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&family=Raleway:wght@400;500&family=Roboto:wght@900&display=swap');
 
+
+%ffr {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+%ffrel {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+}
+
 .main__wrapper {
     width: 1440px;
     margin: 0 auto;
@@ -16,10 +27,9 @@
 
 .title {
     margin-bottom: 40px;
-    
+
     h3 {
-        font-family: 'Raleway', sans-serif;
-        font-style: normal;
+        @extend %ffrel;
         font-weight: 500;
         font-size: 18px;
         line-height: 24px;
@@ -30,8 +40,7 @@
     }
 
     h1 {
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
+        @extend %ffr;        
         font-weight: 900;
         font-size: 60px;
         line-height: 66px;
@@ -39,5 +48,106 @@
         text-transform: uppercase;
         color: #FFCC00;
         margin-bottom: 40px;
+    }
+}
+
+.info {
+    width: 1030px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .vertical {
+        border: none;
+        border-left:  1px solid #FFCC00;
+        height: 560px;
+        width: 1px;     
+    }
+
+    .info__text {
+        width: 430px;
+        text-align: center;
+
+        h2 {
+            @extend %ffr;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 42px;
+            text-align: center;
+            text-transform: capitalize;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+
+        .aftertitle {
+            width: 100px;
+            border: 1px solid #FFCC00;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            @extend %ffrel;
+            margin-bottom: 30px;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 36px;     
+            text-align: center;
+            text-transform: capitalize;
+            color: #666666;
+        }
+    }
+
+    .info__text-icon {
+        margin-bottom: 49px;
+
+        .icon__link {
+            margin-left: 5px;
+            text-decoration: none;
+        }
+
+        .icon__svg:hover {
+            circle {
+                stroke: #FFCC00
+            }
+            path {
+                fill: #FFCC00
+            }
+        }
+
+    }
+
+    .info__text-desc {
+        @extend %ffrel;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #333333;
+        margin-bottom: 20px;
+    }
+
+    .aftertext {
+        width: 50px;
+        border: 1px dashed #FFCC00;
+        margin-bottom: 25px;
+    }
+
+    button {
+        width: 118px;
+        height: 24px;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #666666;
+        background-color: white;
+        border: 1px solid #FFCC00;
+    }
+
+    button:hover{
+        opacity: 0.65;
     }
 }
